@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/floating_view_container"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/floating_view_bg_small"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/id_ll_floating_view"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_24_dp">
+
+        <ImageView
+            android:id="@+id/id_iv"
+            android:layout_alignParentLeft="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/size_9_dp"
+            android:src="@drawable/red_dot_r3"/>
+
+        <TextView
+            android:id="@+id/id_show_shot_time"
+            android:layout_toRightOf="@id/id_iv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="@color/real_white"
+            android:layout_marginLeft="@dimen/size_11_dp"
+            android:lines="1"
+            android:text="00:00:00"
+            android:textSize="@dimen/size_14_sp" />
+
+        <ImageView
+            android:id="@+id/detail_sign"
+            android:layout_width="@dimen/size_24_dp"
+            android:layout_height="@dimen/size_24_dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/size_8_dp"
+            android:src="@drawable/detail_off" />
+
+    </RelativeLayout>
+
+
+    <include layout="@layout/popup_view"
+        android:layout_height="@dimen/size_90_dp"
+        android:layout_width="match_parent"
+        android:visibility="gone"
+        android:id="@+id/detail_view"/>
+
+
+</LinearLayout>

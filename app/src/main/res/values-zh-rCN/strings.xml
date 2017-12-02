@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="application_name">录制屏幕</string>
+    <string name="screenshot_failed_title">"无法进行录屏。"</string>
+    <string name="screenshot_start_screenrecord" >"录屏开始"</string>
+    <string name="screenshot_stop_screenrecord" >"录屏结束"</string>
+</resources>

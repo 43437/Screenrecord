@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/size_90_dp"
+    android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/btn_start_stop"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_90_dp"
+        android:layout_weight="1"
+        android:background="@drawable/popup_item_bg_1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/id_pop_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_36_dp"
+            android:layout_marginTop="@dimen/size_12_dp"
+            android:layout_weight="1"
+            android:src="@drawable/record_off_on" />
+
+        <TextView
+            android:id="@+id/txt_start_stop"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_14_dp"
+            android:layout_marginTop="@dimen/size_8_dp"
+            android:ellipsize="marquee"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="停止"
+            android:textAlignment="center"
+            android:textColor="@color/real_white"
+            android:textSize="@dimen/size_14_sp" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_voice_control"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_90_dp"
+        android:layout_weight="1"
+        android:background="@drawable/popup_item_bg_1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/id_pop_audio"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_36_dp"
+            android:layout_marginTop="@dimen/size_12_dp"
+            android:layout_weight="1"
+            android:src="@drawable/record_voice_on" />
+
+        <TextView
+            android:id="@+id/txt_mic"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_14_dp"
+            android:layout_marginTop="@dimen/size_8_dp"
+            android:ellipsize="marquee"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="麦克风"
+            android:textAlignment="center"
+            android:textColor="@color/real_white"
+            android:textSize="@dimen/size_14_sp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/btn_mark_control"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/size_90_dp"
+        android:layout_weight="1"
+        android:background="@drawable/popup_item_bg_1"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/id_pop_mark"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_36_dp"
+            android:layout_marginTop="@dimen/size_12_dp"
+            android:layout_weight="1"
+            android:src="@drawable/mark_off" />
+
+        <TextView
+            android:id="@+id/txt_mark"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/size_14_dp"
+            android:layout_marginTop="@dimen/size_8_dp"
+            android:ellipsize="marquee"
+            android:lines="1"
+            android:marqueeRepeatLimit="marquee_forever"
+            android:text="标记"
+            android:textAlignment="center"
+            android:textColor="@color/real_white"
+            android:textSize="@dimen/size_14_sp" />
+
+    </LinearLayout>
+
+</LinearLayout>

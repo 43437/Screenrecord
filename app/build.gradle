@@ -1,0 +1,56 @@
+apply plugin: 'com.android.application'
+import java.text.SimpleDateFormat
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.2"
+
+    defaultConfig {
+        applicationId "cn.max.screenrecord"
+        minSdkVersion 21
+        targetSdkVersion 25
+        versionCode 3
+        versionName generateVersion()
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        // Or, if you prefer, you can continue to check for errors in release builds,
+        // but continue the build even when errors are found:
+        abortOnError false
+    }
+}
+
+String generateVersion() {
+
+    boolean flag = false;
+    def versionName = "1.";
+    def sdk = "5";
+    def date = new Date();
+
+    if (flag) {
+        sdk = "1";
+    }
+
+    SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmss");
+    String dateString = formatter.format(date.getTime());
+    String year=dateString.substring(2,4);
+    String month=dateString.substring(4,6);
+    String day=dateString.substring(6,8);
+    String hour=dateString.substring(8,10);
+    versionName = versionName + sdk + "."+year + month + "."+day+hour;
+
+    return versionName;
+
+}
+
+dependencies {
+    compile 'com.android.support:support-v4:25.0.1'
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="application_name">Screenrecord</string>
+    <string name="screenshot_failed_title">Couldn\'t capture screenrecord.</string>
+    <string name="screenshot_start_screenrecord">"Screenrecord is on"</string>
+    <string name="screenshot_stop_screenrecord">"Screenrecord finished"</string>
+</resources>

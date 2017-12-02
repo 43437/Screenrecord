@@ -1,0 +1,24 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <dimen name="size_3_dp">3dp</dimen>
+    <dimen name="size_11_dp">11dp</dimen>
+    <dimen name="size_14_sp">14sp</dimen>
+    <dimen name="size_4_sp">4sp</dimen>
+    <dimen name="size_24_dp">24dp</dimen>
+    <dimen name="size_14_dp">14dp</dimen>
+    <dimen name="size_36_dp">36dp</dimen>
+    <dimen name="size_12_dp">12dp</dimen>
+    <dimen name="size_100_dp">100dp</dimen>
+    <dimen name="size_8_dp">8dp</dimen>
+    <dimen name="size_9_dp">9dp</dimen>
+    <dimen name="size_48_dp">48dp</dimen>
+    <dimen name="size_90_dp">90dp</dimen>
+    <dimen name="size_16_dp">16dp</dimen>
+    <dimen name="size_114_dp">114dp</dimen>
+    <dimen name="size_106_dp">106dp</dimen>
+
+
+</resources>

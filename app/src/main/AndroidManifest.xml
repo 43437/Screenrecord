@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="cn.max.screenrecord">
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAPTURE_AUDIO_OUTPUT" />
+    <uses-permission android:name="android.permission.CAPTURE_VIDEO_OUTPUT" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.SYSTEM_ALERT_WINDOW" />
+
+    <application
+        android:name=".maxRecordApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/application_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service android:name=".ScreenRecordService">
+            <intent-filter>
+                <action android:name="max.intent.action.ACTION_START_SCREEN_RECORD" />
+                <action android:name="max.intent.action.ACTION_STOP_SCREEN_RECORD" />
+                <action android:name="android.intent.action.PHONE_STATE" />
+            </intent-filter>
+        </service>
+        <service
+            android:name=".service.QuickSettingService"
+            android:icon="@drawable/record_off_on"
+            android:label="@string/application_name"
+            android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+            <intent-filter>
+                <action android:name="android.service.quicksettings.action.QS_TILE" />
+            </intent-filter>
+
+            <meta-data
+                android:name="android.service.quicksettings.ACTIVE_TILE"
+                android:value="true" />
+        </service>
+
+        <activity
+            android:name=".activity.RecordPermissionActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/PermissionTheme" />
+        <activity
+            android:name=".activity.StoragePermissionActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/PermissionTheme" />
+        <activity
+            android:name=".activity.FloatWindowPermissionActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/PermissionTheme" />
+
+        <activity android:name=".activity.AudioPermissionActivity"
+            android:excludeFromRecents="true"
+            android:theme="@style/PermissionTheme"/>
+
+        <activity
+            android:name=".activity.MainActivity"
+            android:excludeFromRecents="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
